@@ -1,5 +1,6 @@
 /* Menu item animation */
-#menu_main > li:first-child > a > span {
+/* Make first item blue */
+#menu_main > li:first-child > a > span, #mobile-menu_mobile > li:first-child > a > span {
 	/*animation: bounce 5s ease-out infinite;*/
 	/*animation: inflate 4s linear infinite;*/
 	color:#2dafe5;
@@ -30,6 +31,24 @@ li.menu-item > a::before {
 /*The line under an item when the item is hovered. It is now showing (scale(1))*/
 #menu_main > li > a:hover::before {
 	transform: scaleY(1);
+}
+
+/* Display properly the sub-menus when on mobile */
+.open_child_menu {
+	height: 30px;
+	width: 30px;
+	position:absolute;
+	margin-top:4px;
+	margin-right:45px;
+}
+/* The sort of V that indicates the item can be opened to see sub-items */
+#mobile-menu_mobile .menu-item-badge {
+	transform: scale(1.8);
+	margin-top:5px;
+	margin-left:15px;
+}
+#mobile-menu_mobile .sub-menu, #mobile-menu_mobile li.menu-item {
+	background-color:#312E2A !important;
 }
 
 /* Menu item scale
@@ -144,7 +163,6 @@ li a:hover::before {
 	}
 }
 */
-
 
 
 /* Select gender in white for readability */
