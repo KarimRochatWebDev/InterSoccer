@@ -1,0 +1,223 @@
+/* Menu item animation */
+#menu_main > li:first-child > a > span {
+	/*animation: bounce 5s ease-out infinite;*/
+	/*animation: inflate 4s linear infinite;*/
+	color:#2dafe5;
+}
+
+/*Make the item bigger on hover*/
+li.menu-item a:hover {
+	transform: scale(1.05);
+	transform-origin: bottom center;
+	transition: transform 0.1s linear;
+}
+
+/*The line under an item. It is hidden (scale(0)) until the item is hovered*/
+li.menu-item > a::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	bottom: -1px;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background-color: white;
+	transform: scaleY(0);
+	transform-origin: bottom;
+	transition: transform 0.1s linear;
+}
+
+/*The line under an item when the item is hovered. It is now showing (scale(1))*/
+#menu_main > li > a:hover::before {
+	transform: scaleY(1);
+}
+
+/* Menu item scale
+li a:hover {
+	transform: scale(1.05);
+	transform-origin: bottom center;
+	transition: transform 0.1s linear;
+}
+*/
+
+/* Menu item background color
+li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(200, 200, 200, 0.3);
+    border-radius: 10px;
+    transform: scale(0);
+    transition: all 0.15s linear;
+  }
+
+li a:hover::before {
+    transform: scale(1);
+  }
+*/
+
+/* Menu item underbar from left
+li a {
+	text-decoration: none;
+	transition: 0.4s;
+	position: relative;
+  }
+  
+  li a::before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 3px;
+	background-color: white;
+	bottom: 0;
+	left: 0;
+	transition: width 0.4s;
+  }
+  
+  li a:hover::before {
+	width: 100%;
+  }
+/*
+
+/* Menu item underbar from bottom
+li a::before{
+	content: "";
+	position: absolute;
+	z-index: -1;
+	bottom: -1px;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background-color: white;
+	transform: scaleY(0);
+	transform-origin: bottom;
+	transition: transform 0.3s ease-out;
+}
+
+li a:hover::before {
+	transform: scaleY(1);
+}
+*/
+
+/*
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	7% {
+		transform: translateY(-7px);
+	}
+	15% {
+		transform: translateY(0);
+	}
+	20% {
+		transform: translateY(-3px);
+	}
+	25% {
+		transform: translateY(0);
+	}
+	28% {
+		transform: translateY(-1px);
+	}
+	30% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@keyframes inflate {
+	0% {
+		transform: scale(1);
+	}
+	10% {
+		transform: scale(1.08);
+	}
+	20% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+*/
+
+
+
+/* Select gender in white for readability */
+select#player_gender {
+	color:white;
+}
+
+
+
+/* Articles margin */
+.page_content_wrap:has(.post_header_wrap) {
+	margin-top:150px;
+}
+
+article {
+	margin-top:100px !important;
+}
+
+
+
+/* Text-shadows & text-strokes */
+/*Locations sliders*/
+.swiper-slide-contents {
+	font-weight:bold;
+	text-shadow: 0px 1px #000000, 0px -1px #000000, 1px 0px #000000, -1px 0px #000000;
+}
+
+/*Explore Our Programs and Intro*/
+.programs, .ImageIntroTexte {
+    text-shadow: 0px 4px rgba(0,0,0,0.9), 0px -1px rgba(0,0,0,0.9), 1px 0px rgba(0,0,0,0.9), -1px 0px rgba(0,0,0,0.9);
+}
+
+.programsMobileAndMoreInfo {
+	text-shadow: 0px 1px rgba(0,0,0,0.6), 0px -1px rgba(0,0,0,0.6), 1px 0px rgba(0,0,0,0.6), -1px 0px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 767px) {
+    .ImageIntroTexte {
+        text-shadow: 0px 1px rgba(0,0,0,0.9), 0px -1px rgba(0,0,0,0.9), 1px 0px rgba(0,0,0,0.9), -1px 0px rgba(0,0,0,0.9);
+		/*text-shadow: 2px 2px 1px #000000;*/
+    }
+}
+
+
+
+/* Stylizing menus items when a submenu is added */
+.sc_layouts_menu_nav>li.menu-item-has-children>a.sf-with-ul:after {
+	content:'';
+	display:none;
+}
+
+.sc_layouts_menu_nav>li.menu-item-has-children>a.sf-with-ul {
+	padding-right:0em;
+}
+
+.sub-menu {
+	background-color:#1b1a1a !important;
+}
+
+span.open_child_menu, .open_child_menu, span.open_child_menu:before, .open_child_menu:before {
+	display:none;
+	display:hidden;
+}
+
+
+
+/* Gravity Forms */
+.gform_legacy_markup_wrapper .gfield_checkbox li label,
+.gform_legacy_markup_wrapper .gfield_radio li label {
+    margin-left: 20px;
+}
+
+.gform_legacy_markup_wrapper .gfield_checkbox li label:before,
+.gform_legacy_markup_wrapper .gfield_radio li label:before {
+	margin-left: -20px;
+}

@@ -1,0 +1,25 @@
+#XOpenPositions {
+	margin-bottom:50px;
+}
+
+.offerVClosed {
+	display:inline;
+}
+
+.offerVOpen {
+	display:none;
+}
+
+.offersTitles {
+	font-weight:600;
+}
+
+.offersContents {
+	margin-top:20px;
+	margin-bottom:20px;
+	display:none;
+}
+
+.offersHRTag {
+	border:1px solid white;
+}

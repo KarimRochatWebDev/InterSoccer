@@ -1,0 +1,12 @@
+/*Hiding albums' photos titles*/
+#FunFriendsFootballFairPlay div p {
+	font-size:3vw;
+	color: white;
+    font-family: Aller;
+    font-weight: 700;
+    line-height: 80px;
+}
+
+.elementor-slideshow__footer.elementor-lightbox-prevent-close {
+	display:none;
+}

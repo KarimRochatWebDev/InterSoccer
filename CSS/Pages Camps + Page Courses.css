@@ -1,0 +1,53 @@
+/* Pour corriger le hauteur des sliders */
+.slider-camps>.elementor-widget-container>.elementor-swiper>.swiper,
+.slider-courses>.elementor-widget-container>.elementor-swiper>.swiper {
+    height: 350px !important;
+}
+
+.elementor-testimonial__text:before,
+.elementor-testimonial__text:after {
+    font-size: 40px;
+    color: green;
+}
+
+
+.elementor-testimonial__text:before {
+    content: "“";
+}
+
+.elementor-testimonial__text {
+    text-align: justify;
+    text-align-last: left;
+}
+
+.elementor-testimonial__text:after {
+    content: "”";
+    position: absolute;
+    right: 25px;
+}
+
+
+.elementor-testimonial__name:before {
+    content: "- ";
+}
+
+.elementor-testimonial__name {
+    margin-left: -130px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+
+@media (max-width: 767px) and (orientation: portrait) {
+    .elementor-testimonial__name {
+        margin-left: -80px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+    .elementor-testimonial__name {
+        margin-left: -110%;
+        text-align: left;
+    }
+}

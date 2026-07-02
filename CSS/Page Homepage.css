@@ -1,0 +1,197 @@
+/* Intro image */
+.ImageIntroContainer {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+#ImageIntroTexte1 {
+    top: 50%;
+    font-size: 4vw;
+}
+
+#ImageIntroTexte2 {
+    top: 70%;
+    font-size: 3vw;
+}
+
+.ImageIntroTexte {
+    position: absolute;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Aller;
+    font-weight: 700;
+    line-height: 80px;
+}
+
+
+@media (max-width: 1024px) {
+    #ImageIntroTexte1 {
+        font-size: 4vw;
+    }
+
+    #ImageIntroTexte2 {
+        font-size: 3.5vw;
+    }
+
+    .ImageIntroTexte {
+        line-height: 4vw;
+    }
+}
+
+@media (max-width: 767px) {
+    #ImageIntroTexte1 {
+        font-size: 5vw;
+    }
+
+    #ImageIntroTexte2 {
+        font-size: 4.5vw;
+    }
+
+    .ImageIntroTexte {
+        line-height: 5.5vw;
+    }
+}
+
+@media (max-width: 767px) and (orientation:landscape) {
+    #ImageIntroTexte1 {
+        font-size: 4vw;
+    }
+
+    #ImageIntroTexte2 {
+        font-size: 3.5vw;
+    }
+
+    .ImageIntroTexte {
+        line-height: 5vw;
+    }
+}
+
+
+
+/* Live Activities */
+.slider_container.slider_pagination_pos_bottom .swiper-pagination-bullets, .slider_outer.slider_outer_pagination_pos_bottom .swiper-pagination-bullets, .slider_outer.slider_outer_pagination_pos_bottom_outside .swiper-pagination-bullets {
+    bottom: 0em;
+}
+
+.swiper-pagination-bullet {
+	border-color:#708840 !important;
+}
+
+.slider_container .swiper-pagination-bullet, .slider_outer .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+}
+
+[data-id="e78d608"] {
+	display:none;
+}
+
+
+
+/* Endorsements */
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+	height: 20px;
+	width: 20px;
+}
+
+.slider-camps>.elementor-widget-container>.elementor-swiper>.swiper>.swiper-pagination, .slider-courses>.elementor-widget-container>.elementor-swiper>.swiper>.swiper-pagination {
+	display:none;
+}
+
+div.swiper-wrapper {
+	padding-bottom: 30px;
+}
+
+
+/*Pour corriger le hauteur des sliders de la homepage*/
+.swiper-slide {
+	height: 100% !important;	
+}
+
+.elementor-testimonial__text:before,
+.elementor-testimonial__text:after {
+	font-size: 40px;
+	color: green;
+}
+
+.elementor-testimonial__text:before {
+	content: "“";
+}
+
+.elementor-testimonial__text {
+	text-align: left;
+/* 	text-align-last: left; */
+	text-wrap: pretty;
+/* 	text-wrap: balance; */
+}
+
+.elementor-testimonial__text:after {
+	content: "”";
+	position: absolute;
+	right: 25px;
+}
+
+.elementor-testimonial__name:before {
+	content: "- ";
+}
+
+.elementor-testimonial__name {
+	margin-left: -130px;
+	margin-top: 10px;
+	text-align: left;
+}
+
+/*Animated golden borders*/
+.swiper-slide {
+	position:relative;
+	border-color: transparent;
+}
+
+.swiper-slide::before {
+	height:1000px;
+	width:1000px;
+	background-image: conic-gradient(gold, yellow 50%, gold, #FFF92E, gold);
+	z-index:-2;
+	animation: goldenBorders 2.5s linear infinite;
+}
+
+.swiper-slide::after {
+	width:98%;
+	height:98%;
+	background-color: white;
+	z-index:-2;
+}
+
+.swiper-slide::after, .swiper-slide::before {
+ 	content:'';
+	position:absolute;
+	border-radius:inherit;
+	top:50%;
+	left:50%;
+	translate: -50% -50%;
+}
+
+@keyframes goldenBorders {
+	to {
+		transform: rotate(360deg);
+	}
+}
+/*End of animated golden borders*/
+
+@media (max-width: 767px) and (orientation: portrait) {
+	.elementor-testimonial__name {
+		margin-left: -80px;
+		text-align: left;
+	}
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+	.elementor-testimonial__name {
+		margin-left: -110%;
+		text-align: left;
+	}
+}

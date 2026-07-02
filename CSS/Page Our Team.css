@@ -1,0 +1,192 @@
+.excerptUl {
+    margin-left: -10px;
+}
+
+div.trx_addons_column-1_2 {
+    padding-bottom: 0px !important;
+}
+
+.coachesButtonsBody {
+    --radius: 15px;
+    --border: 2px;
+    --height: 48px;
+    --speed: 0.25s;
+    display: grid;
+    justify-content: flex-start;
+    font-family: Aller, Helvetica, Arial, sans-serif;
+}
+
+.coachesButtons {
+    height: var(--height);
+    display: grid;
+    grid-auto-flow: column;
+    background: #1b1a1a;
+    border-radius: var(--radius);
+    grid-auto-columns: 1fr;
+    position: relative;
+    border: var(--border) solid #e4e5e5;
+}
+
+.coachesButtons {
+    --ease: linear(0,
+            0.1641 3.52%,
+            0.311 7.18%,
+            0.4413 10.99%,
+            0.5553 14.96%,
+            0.6539 19.12%,
+            0.738 23.5%,
+            0.8086 28.15%,
+            0.8662 33.12%,
+            0.9078 37.92%,
+            0.9405 43.12%,
+            0.965 48.84%,
+            0.9821 55.28%,
+            0.992 61.97%,
+            0.9976 70.09%,
+            1);
+}
+
+.coachesButtons>.coachesInput,
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.coachesButtons:has(:checked:nth-of-type(1)) {
+    --active: 0;
+}
+
+.coachesButtons:has(:checked:nth-of-type(2)) {
+    --active: 1;
+}
+
+.coachesButtons:has(:checked:nth-of-type(3)) {
+    --active: 2;
+}
+
+.coachesButtons:has(:checked:nth-of-type(4)) {
+    --active: 3;
+}
+
+.coachesButtons :checked+.coachesLabel {
+    --highlight: 1;
+}
+
+.coachesButtons:has(.coachesInput:nth-of-type(2)) {
+    --count: 2;
+}
+
+.coachesButtons:has(.coachesInput:nth-of-type(3)) {
+    --count: 3;
+}
+
+.coachesButtons:has(.coachesInput:nth-of-type(4)) {
+    --count: 4;
+}
+
+.coachesLabel::before {
+    display: none !important;
+}
+
+.coachesButtons .coachesLabel {
+    padding: 0 clamp(10px, 10px + 10px, 20px);
+    cursor: pointer;
+    text-align: center;
+    height: 100%;
+    display: grid;
+    border-radius: calc(var(--radius) - var(--border));
+    place-items: center;
+    color: white;
+    transition: background, color;
+    transition-duration: 0.25s;
+    transition-timing-function: var(--ease, ease);
+    text-transform: uppercase;
+    font-weight: 400;
+    user-select: none;
+}
+
+.coachesInput:not(:checked)+.coachesLabel:hover {
+    --highlight: 0.35;
+}
+
+.coachesButtons::after {
+    pointer-events: none;
+    content: "";
+    width: calc(100% / var(--count));
+    height: 100%;
+    background: white;
+    position: absolute;
+    border-radius: calc(var(--radius) - var(--border));
+    mix-blend-mode: difference;
+    translate: calc(var(--active, 0) * 100%) 0;
+    transition: translate, outline-color;
+    transition-duration: var(--speed);
+    transition-timing-function: var(--ease, ease);
+    outline: 2px solid transparent;
+}
+
+.coachesButtons:has(:focus-visible)::after {
+    outline-color: red;
+}
+
+.cantonHidden {
+    display: none;
+}
+
+
+@media (min-width: 1199px) {
+    /*The image of a coach*/
+    .sc_team_metro .sc_team_item.has-post-thumbnail .post_featured {
+        height: 80% !important;
+    }
+
+    /*The whole container of a coach*/
+    .sc_team_item.sc_item_container.post_container {
+        height: 500px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1180px) {
+    .sc_team_metro .sc_team_item.has-post-thumbnail .post_featured {
+        height: 60% !important;
+    }
+
+    .sc_team_item.sc_item_container.post_container {
+        height: 100%;
+    }
+}
+
+/*Ça concerne la tablette*/
+@media (min-width:501px) and (max-width: 1023px) {
+    .sc_team_metro .post_featured.with_thumb.hover_link.sc_team_item_thumb.post_featured_bg {
+        max-width: 40vw;
+		margin-left:22px;
+		padding-top:22px;
+    }
+
+    .sc_team_item.sc_item_container.post_container {
+        height: 100%;
+		margin-bottom:100px;
+    }
+}
+
+/*Ça concerne le mobile*/
+@media (max-width: 500px) {
+    .sc_team_metro .post_featured.with_thumb.hover_link.sc_team_item_thumb.post_featured_bg {
+        max-width: 40vw;
+		margin-left:22px;
+		padding-top:22px;
+    }
+
+    .sc_team_item.sc_item_container.post_container {
+        height: 100%;
+		margin-bottom:100px;
+    }
+}
